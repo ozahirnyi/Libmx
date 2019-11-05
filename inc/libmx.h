@@ -20,5 +20,6 @@ char	*mx_nbr_to_hex(unsigned long nbr);
 char	*mx_strnew(const int size);
 char	*mx_strcpy(char *dst, const char *src);
 char	*mx_strncpy(char *dst, const char *src, int len);
+char	*mx_strtrim(const char *str);
 
 #endif
