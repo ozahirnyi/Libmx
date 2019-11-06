@@ -21,5 +21,9 @@ char	*mx_strnew(const int size);
 char	*mx_strcpy(char *dst, const char *src);
 char	*mx_strncpy(char *dst, const char *src, int len);
 char	*mx_strtrim(const char *str);
+char	*mx_strcat(char *restrict s1, const char *restrict s2);
+char	*mx_unic_strcat(const char s1, const char s2);
+char	*mx_strdup(const char *s1);
+char	*mx_ultra_strtrim(const char *str, char c);
 
 #endif
