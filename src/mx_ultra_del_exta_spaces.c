@@ -41,12 +41,13 @@ char    *mx_ultra_del_extra_spaces(const char *str, char c) {
     }
     res = mx_strnew(j + space + 1);
     newstr(buf, res, c);
+	res[j + space + 1] = '\0';
     return res;
 }
-
+/*
 int main(void) {
     char *str = "**Good bye,**Mr.*Anderson.****";
 
     printf("%s\n", mx_ultra_del_extra_spaces(str, '*'));
     return 0;
-}
+}*/
