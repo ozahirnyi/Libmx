@@ -9,11 +9,11 @@ char	**mx_strsplit(const char *s, char c) {
 	int	a;
 	int count;
 
-	if (!s || !s[0])
-		return (NULL);
 	i = -1;
 	a = 0;
 	count = 0;
+	if (!mx_count_words(s, c))
+		return NULL;
 	extra = mx_ultra_del_extra_spaces(s, c);
 	res = (char **)malloc((mx_count_words(s, c) + 1) * sizeof(char *));
 	while (extra[++i])
@@ -24,15 +24,17 @@ char	**mx_strsplit(const char *s, char c) {
 	res[a] = NULL;
 	return res;
 }
-
+/*
 int	main(void) {
-	char *s = "-------------"; //"**Good bye,**Mr.*Anderson.****";
+	char **a = NULL;
+	printf("%s\n", a[0]);
+	char *s = NULL;//"**Good bye,**Mr.*Anderson.****";
 
-	char **q = mx_strsplit(s, '-');
+	char **q = mx_strsplit(s, '*');
 	if (q) {
 		for(int i = 0; q[i]; i++) {
 			printf("%s\n", q[i]);
 		}
 	}
 	return 0;
-}
+}*/

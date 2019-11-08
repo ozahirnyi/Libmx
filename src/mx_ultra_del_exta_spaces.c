@@ -19,29 +19,33 @@ void    newstr(char *buf, char *res, char c) {
         }
         i++;
     }
+	res[j] = c;
+}
+
+void	counter(const char *str, char c, int *j, int *space) {
+	int i;
+
+	i = 0;
+    while (str[i++] != '\0') {
+        if (str[i] != c)
+            (*j)++;
+        if (str[i + 1] == c && str[i + 1] != '\0' && str[i] != c)
+            (*space)++;
+	}
 }
 
 char    *mx_ultra_del_extra_spaces(const char *str, char c) {
     char *buf;
     char *res;
-    int i;
-    int j;
-    int space;
+	int space;
+	int j;
 
-    i = 0;
-    space = 0;
-    j = 0;
+	j = 0;
+	space = 0;
     buf = mx_ultra_strtrim(str, c);
-    while (buf[i] != '\0') {
-        if (buf[i] != c)
-            j++;
-        if (buf[i + 1] == c && buf[i + 1] != '\0' && buf[i] != c)
-            space++;
-        i++;
-    }
-    res = mx_strnew(j + space + 1);
+	counter(buf, c, &j, &space);
+    res = mx_strnew(j + space + 2);
     newstr(buf, res, c);
-	res[j + space + 1] = '\0';
     return res;
 }
 /*
