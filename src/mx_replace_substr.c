@@ -1,6 +1,6 @@
 #include "../inc/libmx.h"
 
-void	replaser(char *res, const char *replace, int i) {	
+void	replaser(char *res, const char *replace, int i, const char *sub) {	
 	int	len = mx_strlen(replace);
 
 	int j = 0;
@@ -8,34 +8,45 @@ void	replaser(char *res, const char *replace, int i) {
 		len = mx_strlen(sub);
 	else
 		len = mx_strlen(replace);
-	for (; i <= len; i++) {
+	for (; j <= len; j++) {
 		res[i] = replace[j];
-		j++;
+		i++;
 	}
+}
+
+int	cheker(const char *str, const char *sub, const char *replace) {
+	if (!str || !sub || !replace)
+		return 0;
+	else
+		return 1;
 }
 
 char	*mx_replace_substr(const char *str, const char *sub, const char *replace) {
 	int	i = 0;
-	int	len;
+	int len;
 	int	counter = 0;
+	int sub_str = mx_count_substr(str, sub);
 	char *res;
 
-	res = (char *)malloc((mx_count_substr(str, sub) * len) + 1 + 10);
-	while (str[i]) {
+	if (!cheker(str, sub, replace))
+		return NULL;
+	len = mx_strlen(sub);
+	res = (char *)malloc(mx_strlen(str) - sub_str * len + sub_str * mx_strlen(replace));
+	for (i = 0; str[i]; i++) {
 		if (i == mx_skip_substr_index(str, sub, counter)) {
-			replaser(res, replace, i);
-			i += len;
+			replaser(res, replace, i, sub);
+			i += len - 1;
 			counter++;
 		}
-		else {
+		else
 			res[i] = str[i];
-			i++;
-		}
 	}
 	return res;
 }
-
+/*
 int	main(void) {
+	printf("%s\n", mx_replace_substr("McDonalds", "alds", "qqqqqqqqqqq"));
 	printf("%s\n", mx_replace_substr("Ururu turu", "ru", "ta"));
+	printf("%s\n", mx_replace_substr(NULL, "ru", "ta"));
 	return 0;
-}
+}*/
