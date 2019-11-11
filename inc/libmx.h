@@ -10,6 +10,7 @@ void	mx_print_unicode(wchar_t c);
 void	mx_print_strarr(char **arr, const char *delim);
 void	mx_printchar(char c);
 void	mx_printstr(const char *s);
+int	mx_memcmp(const void *s1, const void *s2, size_t n);
 int	mx_strlen(const char *s);
 int	mx_strcmp(const char *s1, const char *s2);
 int	mx_sqrt(int x);
