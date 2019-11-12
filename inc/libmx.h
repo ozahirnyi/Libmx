@@ -33,4 +33,13 @@ char	*mx_strndup(const char *s1, size_t n);
 char	*mx_ultra_strtrim(const char *str, char c);
 char	*mx_ultra_del_extra_spaces(const char *str, char c);
 
+typedef struct s_list {
+	void *data;
+	struct s_list *next;
+} t_list;
+
+t_list	*mx_create_node(void *data);
+void	mx_push_front(t_list **list, void *data);
+void	mx_push_back(t_list **list, void *data);
+
 #endif
