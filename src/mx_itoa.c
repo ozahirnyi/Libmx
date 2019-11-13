@@ -36,8 +36,8 @@ char	*mx_itoa(int number) {
 	}
 	return res;
 }
-
+/*
 int	main(void) {
 	mx_printstr(mx_itoa(2147483648));
 	return 0;
-}
+}*/

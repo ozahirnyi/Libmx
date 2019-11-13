@@ -18,7 +18,8 @@ char	*newstr(char *buf, char *res) {
             j++;
         }
         i++;
-    }	
+    }
+	return res;
 }
 
 char	*mx_del_extra_spaces(const char *str) {
