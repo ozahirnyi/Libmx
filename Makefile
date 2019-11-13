@@ -117,7 +117,7 @@ FLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 all: install clean
 
 install:
-		@clang $(FLAGS) -c $(SRC) -I libmx.h
+		@clang $(FLAGS) -c $(SRC)
 		@mkdir -p obj
 		@cp $(OBJ) obj/.
 		@ar -rc $(NAME) $(OBJ)
