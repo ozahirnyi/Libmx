@@ -51,9 +51,12 @@ SRC = src/mx_printchar.c \
 		src/mx_pop_front.c \
 		src/mx_pop_back.c \
 		src/mx_list_size.c \
+		src/mx_ultra_strtrim.c \
+		src/mx_ultra_del_extra_spaces.c \
+		src/mx_skip_substr_index.c \
+		src/mx_strncmp.c \
 
 OBJ = mx_printchar.o \
-		mx_print_unicode.o \
 		mx_print_unicode.o \
 		mx_printstr.o \
 		mx_print_strarr.o \
@@ -102,14 +105,19 @@ OBJ = mx_printchar.o \
 		mx_push_back.o \
 		mx_pop_front.o \
 		mx_pop_back.o \
+		mx_strlen.o \
 		mx_list_size.o \
+		mx_ultra_strtrim.o \
+		mx_ultra_del_extra_spaces.o \
+		mx_skip_substr_index.o \
+		mx_strncmp.o \
 
 FLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
 all: install clean
 
 install:
-		@clang $(FLAGS) -c $(SRC)
+		@clang $(FLAGS) -c $(SRC) -I libmx.h
 		@mkdir -p obj
 		@cp $(OBJ) obj/.
 		@ar -rc $(NAME) $(OBJ)
