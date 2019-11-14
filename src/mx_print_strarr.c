@@ -14,10 +14,3 @@ void	mx_print_strarr(char **arr, const char *delim) {
 		mx_printstr("\n");
 	}
 }
-
-int	main(void) {
-	const char *delim = "qwe";
-	char *arr[] = {"AAAA", "QQQQ", "QWE", NULL};
-	mx_print_strarr(arr, delim);
-	return 0;
-}

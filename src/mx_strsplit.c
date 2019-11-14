@@ -1,7 +1,5 @@
 #include "../inc/libmx.h"
 
-#include <stdio.h>
-
 char	**mx_strsplit(const char *s, char c) {
 	char **res;
 	char *extra;
@@ -24,17 +22,3 @@ char	**mx_strsplit(const char *s, char c) {
 	res[a] = NULL;
 	return res;
 }
-/*
-int	main(void) {
-	char **a = NULL;
-	printf("%s\n", a[0]);
-	char *s = NULL;//"**Good bye,**Mr.*Anderson.****";
-
-	char **q = mx_strsplit(s, '*');
-	if (q) {
-		for(int i = 0; q[i]; i++) {
-			printf("%s\n", q[i]);
-		}
-	}
-	return 0;
-}*/

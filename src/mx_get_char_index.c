@@ -1,7 +1,5 @@
 #include "../inc/libmx.h"
 
-#include <stdio.h>
-
 int	mx_get_char_index(const char *str, char c) {
 	int	i;
 
@@ -13,10 +11,3 @@ int	mx_get_char_index(const char *str, char c) {
 	}
 	return -1;
 }
-/*
-int	main(void) {
-	char *s = NULL;
-
-	printf("%d\n", mx_get_char_index(s, 'q'));
-	return 0;
-}*/

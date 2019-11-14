@@ -2,14 +2,13 @@ NAME = libmx.a
 
 SRC = src/mx_printchar.c \
 		src/mx_print_unicode.c \
-		src/mx_print_unicode.c \
 		src/mx_printstr.c \
 		src/mx_print_strarr.c \
 		src/mx_printint.c \
 		src/mx_pow.c \
 		src/mx_sqrt.c \
-		src/mx_nbr_to_hex.c \
 		src/mx_hex_to_nbr.c \
+		src/mx_nbr_to_hex.c \
 		src/mx_itoa.c \
 		src/mx_foreach.c \
 		src/mx_binary_search.c \
@@ -63,8 +62,8 @@ OBJ = mx_printchar.o \
 		mx_printint.o \
 		mx_pow.o \
 		mx_sqrt.o \
-		mx_nbr_to_hex.o \
 		mx_hex_to_nbr.o \
+		mx_nbr_to_hex.o \
 		mx_itoa.o \
 		mx_foreach.o \
 		mx_binary_search.o \

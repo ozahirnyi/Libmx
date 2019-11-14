@@ -43,10 +43,3 @@ char	*mx_replace_substr(const char *str, const char *sub, const char *replace) {
 	}
 	return res;
 }
-/*
-int	main(void) {
-	printf("%s\n", mx_replace_substr("McDonalds", "alds", "qqqqqqqqqqq"));
-	printf("%s\n", mx_replace_substr("Ururu turu", "ru", "ta"));
-	printf("%s\n", mx_replace_substr(NULL, "ru", "ta"));
-	return 0;
-}*/

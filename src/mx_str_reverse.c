@@ -1,7 +1,5 @@
 #include "../inc/libmx.h"
 
-#include <stdio.h>
-
 void	mx_str_reverse(char *s) {
 	int	i;
 	int j;
@@ -21,12 +19,4 @@ void	mx_str_reverse(char *s) {
 		i--;
 		j++;
 	}
-}
-
-int	main(void) {
-	char *s = "xxqzz";
-
-	mx_str_reverse(s);
-	printf("%s\n", s);
-	return 0;
 }

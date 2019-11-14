@@ -17,8 +17,3 @@ void	mx_printint(int n) {
 		mx_printint(n % 10);
 	}
 }
-
-int	main(void) {
-	mx_printint(123);
-	return 0;
-}

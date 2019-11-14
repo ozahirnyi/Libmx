@@ -29,8 +29,3 @@ void	mx_print_unicode(wchar_t c) {
 	}
 	write(1, &b, 4);
 }
-
-int	main(void) {
-	wchar_t h = 0x1F646;
-	mx_print_unicode(h);
-}

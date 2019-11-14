@@ -1,7 +1,5 @@
 #include "../inc/libmx.h"
 
-#include <stdio.h>
-
 void    newstr(char *buf, char *res, char c) {
     int i;
     int j;
@@ -48,10 +46,3 @@ char    *mx_ultra_del_extra_spaces(const char *str, char c) {
     newstr(buf, res, c);
     return res;
 }
-/*
-int main(void) {
-    char *str = "**Good bye,**Mr.*Anderson.****";
-
-    printf("%s\n", mx_ultra_del_extra_spaces(str, '*'));
-    return 0;
-}*/

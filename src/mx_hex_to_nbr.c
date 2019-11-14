@@ -1,5 +1,4 @@
 #include "../inc/libmx.h"
-#include <stdio.h>
 
 unsigned long	mx_hex_to_nbr(const char *hex) {
 	unsigned long base = 1;
@@ -19,9 +18,4 @@ unsigned long	mx_hex_to_nbr(const char *hex) {
 		i--;
 	}
 	return res;
-}
-
-int	main(void) {
-	printf("%lu\n", mx_hex_to_nbr("0"));
-	return 0;
 }

@@ -1,3 +1,5 @@
+#include "../inc/libmx.c"
+
 int	mx_strlen(const char *s) {
 	int i;
 

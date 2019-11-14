@@ -1,7 +1,5 @@
 #include "../inc/libmx.h"
 
-#include <stdio.h>
-
 char	*mx_strstr(const char *haystack, const char *needle) {
 	while (*haystack) {
 		if (*haystack == *needle) {
@@ -11,12 +9,4 @@ char	*mx_strstr(const char *haystack, const char *needle) {
 		haystack++;
 	}
 	return NULL;
-}
-
-int	main(void) {
-	char *haystack = "McDonalds";
-	char *needle = "Don";
-
-	printf("%s\n", mx_strstr(haystack, needle));
-	return 0;
 }

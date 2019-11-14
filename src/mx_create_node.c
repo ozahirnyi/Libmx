@@ -8,12 +8,3 @@ t_list	*mx_create_node(void *data) {
 
 	return node;
 }
-/*
-int	main(void) {
-	t_list *test;
-
-	char *b = NULL;
-	test = mx_create_node(b);
-	printf("data: %s\n", test->data);
-	return 0;
-}*/

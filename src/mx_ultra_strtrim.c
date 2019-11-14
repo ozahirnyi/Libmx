@@ -1,7 +1,5 @@
 #include "../inc/libmx.h"
 
-#include <stdio.h>
-
 char    *mx_ultra_strtrim(const char *str, char c) {
     int i;
     int j;
@@ -24,9 +22,3 @@ char    *mx_ultra_strtrim(const char *str, char c) {
     new[q] = '\0';
     return new;
 }
-/*
-int main(void) {
-    char *str = "\f  My name... is Neo  \t\n ";
-    printf("%s\n", mx_strtrim(str));
-    return 0;
-}*/
