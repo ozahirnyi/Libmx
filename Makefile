@@ -17,6 +17,7 @@ SRC = src/mx_printchar.c \
 		src/mx_swap_char.c \
 		src/mx_str_reverse.c \
 		src/mx_strdel.c \
+		src/mx_del_strarr.c \
 		src/mx_get_char_index.c \
 		src/mx_strdup.c \
 		src/mx_strndup.c \
@@ -54,6 +55,8 @@ SRC = src/mx_printchar.c \
 		src/mx_ultra_del_extra_spaces.c \
 		src/mx_skip_substr_index.c \
 		src/mx_strncmp.c \
+		src/mx_is_space.c \
+		src/mx_strjoin.c \
 
 OBJ = mx_printchar.o \
 		mx_print_unicode.o \
@@ -72,6 +75,7 @@ OBJ = mx_printchar.o \
 		mx_swap_char.o \
 		mx_str_reverse.o \
 		mx_strdel.o \
+		mx_del_strarr.o \
 		mx_get_char_index.o \
 		mx_strdup.o \
 		mx_strndup.o \
@@ -110,6 +114,8 @@ OBJ = mx_printchar.o \
 		mx_ultra_del_extra_spaces.o \
 		mx_skip_substr_index.o \
 		mx_strncmp.o \
+		mx_is_space.o \
+		mx_strjoin.o \
 
 FLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 

@@ -1,11 +1,9 @@
 #include "../inc/libmx.h"
 
 int	mx_count_words(const char *str, char c) {
-	int	i;
-	int	res;
+	int	i = 0;
+	int	res = 0;
 
-	i = 0;
-	res = 0;
 	if (str == NULL)
 		return -1;
 	while (str[i] != '\0') {

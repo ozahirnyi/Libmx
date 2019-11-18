@@ -1,24 +1,20 @@
 #include "../inc/libmx.h"
 
 char    *mx_ultra_strtrim(const char *str, char c) {
-    int i;
-    int j;
-    int q;
-    char *new;
+    int i = 0;
+    int j = 0;
+    char *new = NULL;
 
-    i = 0;
-    q = 0;
-    j = mx_strlen(str) - 1;
+	if (str == NULL)
+		return new;
+	j = mx_strlen(str) - 1;
     while (str[i] == c)
         i++;
     while (str[j] == c)
         j--;
-    new = mx_strnew(j - i);
-    while (i <= j) {
-        new[q] = str[i];
-        q++;
-        i++;
-    }
-    new[q] = '\0';
-    return new;
+    new = mx_strnew(j - i + 1);
+    if (new == NULL)
+		return new;
+	new = mx_strncpy(new, str + i, j - i + 1);
+	return new;
 }

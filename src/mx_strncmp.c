@@ -1,8 +1,5 @@
 #include "../inc/libmx.h"
 
-#include <stdio.h>
-#include <string.h>
-
 int	mx_strncmp(const char *s1, const char *s2, int n) {
 	int	i;
 
@@ -13,12 +10,3 @@ int	mx_strncmp(const char *s1, const char *s2, int n) {
 		i++;
 	return s1[i] - s2[i];
 }
-/*
-int	main(void) {
-	char *s1 = "XxxxX";
-	char *s2 = "QxqxX";
-
-	printf("%d\n", mx_strncmp(s1, s2, 0));
-	printf("%d\n", strncmp(s1, s2, 0));
-	return 0;
-}*/

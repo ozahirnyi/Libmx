@@ -1,7 +1,5 @@
 #include "../inc/libmx.h"
 
-#include <stdio.h>
-
 int	mx_get_substr_index(const char *str, const char *sub) {
 	int	i;
 
@@ -18,11 +16,3 @@ int	mx_get_substr_index(const char *str, const char *sub) {
 	}
 	return -1;
 }
-/*
-int	main(void) {
-	char *str = "McDonalds";
-	char *sub;
-
-	printf("%d\n", mx_get_substr_index(str, sub));
-	return 0;
-}*/
