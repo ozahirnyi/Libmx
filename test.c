@@ -6,7 +6,7 @@ int main(void) {
 	//mx_printchar('\n');
     //mx_printstr("sss");
 	//mx_printchar('\n');
-    //mx_print_unicode(0x1F646);
+    //mx_print_unicode(0x23F1);
 	//mx_printchar('\n');
     //char *arr[] = {"abc", "xyz", "ghi", "def", NULL};
     //mx_print_strarr(arr, "  ");
@@ -65,11 +65,28 @@ int main(void) {
 	//for (int i = 0; i < 4; i++)
 	//	printf("%s\n", res[i]);
 	//printf("%s\n", res);
-	const char s1[5] = "this\0";
+	//const char s1[5] = "this\0";
 	//const char s2[11] = "dodge \0";
 	//const char *s3 = NULL;
-	char *res = mx_strjoin(NULL, s1);
-	printf("%s\n", res);
+	//char *res = mx_strjoin(NULL, s1);
+	//printf("%s\n", res);
+	//const char *str = "McDonalds";
+	//const char *sub = "alds";
+	//const char *replace = NULL;//"uts";
+	//printf("%s\n", mx_replace_substr(str, sub, replace));
+	//printf("%s\n", mx_file_to_str("qwe"));
+	#include <string.h>
+	char b[] = "qqxq";
+	char q[] = "zzxz";
+	int c = 'x';
+	size_t len = 4;
+//	printf("%s\n", mx_memset(b, c, len));
+//	printf("%s\n", memset(b, c, len));
+	//printf("%s\n", mx_memcpy(q, b, len));
+	//printf("%s\n", memcpy(q, b, len));
+	printf("%s\n", mx_memccpy(q, b, c, len));
+	//printf("%s\n", memccpy(q, b, c, len));
+	
 	system("leaks -q a.out");
 	return 0;
 }

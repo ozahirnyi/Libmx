@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <wchar.h>
 #include <stdlib.h>
+#include <fcntl.h>
 
 void	mx_printint(int n);
 void	mx_print_unicode(wchar_t c);
@@ -15,6 +16,9 @@ void	mx_str_reverse(char *s);
 void	mx_printstr(const char *s);
 void	mx_swap_char(char *s1, char *s2);
 void	mx_foreach(int *arr, int size, void (*f)(int));
+void	*mx_memset(void *b, int c, size_t len);
+void	*mx_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 int	mx_memcmp(const void *s1, const void *s2, size_t n);
 int	mx_strlen(const char *s);
 int	mx_strcmp(const char *s1, const char *s2);
@@ -31,6 +35,7 @@ int	mx_count_substr(const char *str, const char *sub);
 int	mx_binary_search(char **arr, int size, const char *s, int *count);
 double	mx_pow(double n, unsigned int pow);
 char	*mx_itoa(int number);
+char	*mx_file_to_str(const char *file);
 char	*mx_strstr(const char *haystack, const char *needle);
 char	*mx_nbr_to_hex(unsigned long nbr);
 char	*mx_strnew(const int size);
@@ -44,6 +49,7 @@ char	*mx_ultra_strtrim(const char *str, char c);
 char	*mx_del_extra_spaces(const char *str);
 char	*mx_ultra_del_extra_spaces(const char *str, char c);
 char	*mx_strjoin(const char *s1, const char *s2);
+char	*mx_replace_substr(const char *str, const char *sub, const char *replace);
 char	**mx_strsplit(const char *s, char c);
 unsigned long	mx_hex_to_nbr(const char *hex);
 

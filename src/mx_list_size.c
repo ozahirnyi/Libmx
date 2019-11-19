@@ -5,8 +5,8 @@ int	mx_list_size(t_list *list) {
 	int	i = 0;
 
 	while (buf != NULL) {
-		buf = buf->next;
 		i++;
+		buf = buf->next;
 	}
 	return i;
 }

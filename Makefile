@@ -1,6 +1,7 @@
 NAME = libmx.a
 
 SRC = src/mx_printchar.c \
+		src/mx_file_to_str.c \
 		src/mx_print_unicode.c \
 		src/mx_printstr.c \
 		src/mx_print_strarr.c \
@@ -59,6 +60,7 @@ SRC = src/mx_printchar.c \
 		src/mx_strjoin.c \
 
 OBJ = mx_printchar.o \
+		mx_file_to_str.o \
 		mx_print_unicode.o \
 		mx_printstr.o \
 		mx_print_strarr.o \
