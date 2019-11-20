@@ -76,8 +76,8 @@ int main(void) {
 	//printf("%s\n", mx_replace_substr(str, sub, replace));
 	//printf("%s\n", mx_file_to_str("qwe"));
 	#include <string.h>
-	char src[] = "wxsDDDDz";
-	char dst[] = "DDDDz";
+	//char src[] = "wxsDDDDz";
+	//char dst[] = "DDDDz";
 	//int c = 'q';
 	//size_t len = 0;
 	//printf("%s\n", mx_memset(b, c, len));
@@ -90,8 +90,23 @@ int main(void) {
 	//printf("%d\n", memcmp(dst, src, len));
 	//printf("%s\n", mx_memchr(src, 'r', 2));
 	//printf("%s\n", mx_memrchr(src, 'Z', 4));
-	printf("%s\n", mx_memmem(src, 8, dst, 5));
-
+	//printf("%s\n", mx_memmem(src, 8, dst, 5));
+	//char *res = mx_realloc(src, 10);
+	//printf("%s\n", res);
+	//char *str = "CCCCCC";
+	//char *str1 = "BBBBBB";
+	//char *str2 = "AAAAAA";
+	t_list *list = NULL;
+	//mx_push_back(&list, str);
+	//mx_push_back(&list, str1);
+	//mx_push_back(&list, str2);
+	//mx_pop_back(&list);
+	//mx_pop_back(&list);
+	mx_sort_list(list, cmp);
+	//for (int i = 0; i < 3; i++) {
+	//	printf("%s\n", list->data);
+	//	list = list->next;
+	//}
 	system("leaks -q a.out");
 	return 0;
 }

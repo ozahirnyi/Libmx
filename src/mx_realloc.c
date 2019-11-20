@@ -1,21 +1,16 @@
 #include "../inc/libmx.h"
 
-#include <string.h>
-#include <stdio.h>
+void	*mx_realloc(void *ptr, size_t size) {
+	char *res = mx_strnew(size);
+	char *buf = (char *)ptr;
+	unsigned int i;
 
-int	main(void) {
-	int i;
-	char c = 48;
-	char *str = mx_strnew(10);
-	for(i = 0; i < 12; i++)
-		str[i] = c++;
-	str[i] = '\0';
-	printf("%s\n", str);
-	str = (char *)realloc(str, 5 * sizeof(char *));
-	c = 48;
-	for(i = 0; i < 15; i++)
-		str[i] = c++;
-	str[i] = '\0';
-	printf("%s\n", str);
-	return 0;
+	if (res == NULL)
+		return NULL;
+	if (ptr == NULL)
+		return res;
+	for (i = 0; i < size; i++)
+		res[i] = buf[i];
+	free(ptr);
+	return res;
 }
