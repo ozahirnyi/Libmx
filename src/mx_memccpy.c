@@ -6,10 +6,12 @@ void	*mx_memccpy(void *restrict dst, const void *restrict src, int c, size_t n) 
 	unsigned int i;
 
 	for (i = 0; i < n; i++) {
-		*dst++;
-		if (buf[i] == c)
-			return dst;
 		res[i] = buf[i];
+		if (buf[i] == c)
+			break;
 	}
-	return dst;
+	if (i == n)
+		return NULL;
+	i++;
+	return (char *)dst + i;
 }

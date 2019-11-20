@@ -76,17 +76,22 @@ int main(void) {
 	//printf("%s\n", mx_replace_substr(str, sub, replace));
 	//printf("%s\n", mx_file_to_str("qwe"));
 	#include <string.h>
-	char b[] = "qqxq";
-	char q[] = "zzxz";
-	int c = 'x';
-	size_t len = 4;
-//	printf("%s\n", mx_memset(b, c, len));
-//	printf("%s\n", memset(b, c, len));
+	char src[] = "wxsDDDDz";
+	char dst[] = "DDDDz";
+	//int c = 'q';
+	//size_t len = 0;
+	//printf("%s\n", mx_memset(b, c, len));
+	//printf("%s\n", memset(b, c, len));
 	//printf("%s\n", mx_memcpy(q, b, len));
 	//printf("%s\n", memcpy(q, b, len));
-	printf("%s\n", mx_memccpy(q, b, c, len));
-	//printf("%s\n", memccpy(q, b, c, len));
-	
+	//printf("%s\n", memccpy(dst, src, c, len));
+	//printf("%s\n", dst);
+	//printf("%s\n", mx_memccpy(dst, src, c, len));
+	//printf("%d\n", memcmp(dst, src, len));
+	//printf("%s\n", mx_memchr(src, 'r', 2));
+	//printf("%s\n", mx_memrchr(src, 'Z', 4));
+	printf("%s\n", mx_memmem(src, 8, dst, 5));
+
 	system("leaks -q a.out");
 	return 0;
 }
